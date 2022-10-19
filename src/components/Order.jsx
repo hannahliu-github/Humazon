@@ -1,5 +1,5 @@
 import React from 'react';
-//import '../style/Order.css';
+import '../style/Order.css';
 import moment from "moment";
 import CheckoutProduct from './CheckoutProduct';
 //import CurrencyFormat from "react-currency-format";

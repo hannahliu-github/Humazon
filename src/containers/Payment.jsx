@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-//import '../style/Payment.css';
+import '../style/Payment.css';
 import { db } from "../firebase";
 import axios from '../components/axios';
 import { Link, useNavigate } from 'react-router-dom';
@@ -91,8 +91,8 @@ function Payment() {
                     </div>
                     <div className='payment-address'>
                         <p>{user?.email}</p>
-                        <p>252 124th Street apt.4</p>
-                        <p>New York, NY 10021</p>
+                        <p>huzi's home</p>
+                        <p>New York, NY 10018</p>
                     </div>    
                 </div>
                 <div className='payment-section'>

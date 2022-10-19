@@ -1,5 +1,5 @@
 import React from 'react'
-//import '../style/Subtotal.css'
+import '../style/Subtotal.css'
 import { useStateValue } from '../StateProvider'
 //import CurrencyFormat from 'react-currency-format';
 import { getBasketTotal } from '../reducer';
