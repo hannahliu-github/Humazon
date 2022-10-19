@@ -10,6 +10,16 @@ import Header from './containers/Header';
 import { useStateValue } from "./StateProvider";
 import { auth } from "./firebase";
 import React, { useEffect } from 'react';
+import Orders from './containers/Orders';
+import Checkout from './containers/Checkout';
+import Payment from './containers/Payment';
+import { loadStripe } from "@stripe/stripe-js";
+import { Elements } from "@stripe/react-stripe-js";
+
+// You don't need to hide this test API key, no need to use .env and .gitignore
+const promise = loadStripe(
+  "pk_test_51J2HdfF1niojSsYm5sf5mxCyGjAsbAJ15oZSEqlLqmKgKYNxgQhCRydDMfi799CT1eSPijoQFUNV4I7zXBRJp4MW00C56TMXoB"
+);
 
 function App() {
 
@@ -46,6 +56,11 @@ function App() {
 
       <Route exact path="/" element={<Home/>} /> 
       <Route exact path="/login" element={<Login/>} />
+      <Route exact path="/orders" element={<Orders/>} />
+      <Route exact path="/checkout" element={<Checkout/>} />
+      <Route exact path="/payment" element={<Elements stripe={promise}>
+          <Payment />
+        </Elements>} />
 
     </Routes>
     </div>

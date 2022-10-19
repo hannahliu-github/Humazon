@@ -11,9 +11,9 @@ function Home() {
                 <div className='home-row'>
                     <Product
                         id='1' 
-                        title='Apple AirPods with Charging Case (Wired)'
-                        price={199.99}
-                        image='https://snipstock.com/assets/cdn/png/fb27dcca8b743ff55c84d725016410c8.png'
+                        title='All Natural Freeze Dried Wild Alaskan Salmon Treats for Cats & Dogs - Single Ingredient No Grain Snack With No Additives or Preservatives, - 5 Ounce Bag - 6 Pack'
+                        price={109.99}
+                        image='https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/61BgEBmNwbL._AC_SX425_.jpg'
                         rating={5}
                     />
                     <Product
