@@ -7,6 +7,26 @@ export const initialState = {
   export const getBasketTotal = (basket) => 
     basket?.reduce((amount, item) => item.price + amount, 0);
     
+  export const CurrencyFormat = (value) => {
+      let res = '';
+      const valueStr = value.toFixed(2);
+      const lenValueStr = valueStr.length;
+      let decimalStr = valueStr.slice(lenValueStr - 2, lenValueStr);
+      res = '.' + decimalStr;
+  
+      value = Number(valueStr.slice(0, lenValueStr - 3));
+      let nextDigits = value % 1000;
+      res = nextDigits + res;
+  
+      while (value >= 1000) {
+          value = Math.floor(value / 1000);
+          let nextDigits = value % 1000;
+          res = nextDigits + ',' + res;
+      }
+      res = '$' + res;
+      return res;
+  };
+
   const reducer = (state, action) => {
     switch (action.type) {
       case "ADD_TO_BASKET":
@@ -15,6 +35,12 @@ export const initialState = {
         return {
           ...state,
           basket: [...state.basket, action.item],
+        };
+
+      case 'EMPTY_BASKET':
+        return {
+          ...state,
+          basket: []
         };
 
       case "SET_USER":

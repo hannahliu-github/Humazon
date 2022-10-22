@@ -3,9 +3,8 @@ import '../style/Payment.css';
 import { db } from "../firebase";
 import axios from '../components/axios';
 import { Link, useNavigate } from 'react-router-dom';
-import { getBasketTotal } from '../reducer';
+import { getBasketTotal, CurrencyFormat } from '../reducer';
 import { useStateValue } from '../StateProvider'
-//import CurrencyFormat from 'react-currency-format';
 import CheckoutProduct from '../components/CheckoutProduct';
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
@@ -27,7 +26,8 @@ function Payment() {
             const response = await axios({
                 method: 'post',
                 // Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${getBasketTotal(basket) * 100}`
+                url: `/payments/create?total=${Math.trunc(getBasketTotal(basket) * 100)}`,
+                headers: {'Access-Control-Allow-Origin': 'http://localhost:3001'}
             });
             setClientSecret(response.data.clientSecret)
         }
@@ -120,7 +120,7 @@ function Payment() {
                             <CardElement onChange={handleChange}/>
 
                             <div className='payment__priceContainer'>
-                                <h3>Order Total: {getBasketTotal(basket)}</h3>
+                                <h3>Order Total: {CurrencyFormat(getBasketTotal(basket))}</h3>
                                     
                                     <button disabled={processing || disabled || succeeded}>
                                         <span>{processing ? <p>Processing</p> : "Buy Now"}</span>

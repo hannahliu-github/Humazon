@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStateValue } from '../StateProvider'
 import '../style/Product.css'
+import { CurrencyFormat } from '../reducer';
 
 function Product({ id, title, image, price, rating }) {
     const [{ basket }, dispatch] = useStateValue();
@@ -24,8 +25,7 @@ function Product({ id, title, image, price, rating }) {
             <div className="product-info">
                 <p>{title}</p>
                 <p className='product-price'>
-                    <small>$</small>
-                    <strong>{price}</strong>    
+                    <strong>{CurrencyFormat(price)}</strong>    
                 </p> 
                 <div className="product-rating">
                     {Array(rating)

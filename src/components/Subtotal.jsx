@@ -1,8 +1,7 @@
 import React from 'react'
 import '../style/Subtotal.css'
 import { useStateValue } from '../StateProvider'
-//import CurrencyFormat from 'react-currency-format';
-import { getBasketTotal } from '../reducer';
+import { getBasketTotal, CurrencyFormat } from '../reducer';
 import { useNavigate } from "react-router-dom";
 
 function Subtotal() {
@@ -14,7 +13,7 @@ function Subtotal() {
             <>
               <p>
                 {/* Part of the homework */}
-                Subtotal ({basket.length} items): <strong>{getBasketTotal(basket)}</strong>
+                Subtotal ({basket.length} items): <strong>{CurrencyFormat(getBasketTotal(basket))}</strong>
               </p>
               <small className="subtotal-gift">
                 <input type="checkbox" /> This order contains a gift

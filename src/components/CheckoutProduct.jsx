@@ -1,6 +1,7 @@
 import React from 'react'
 import { useStateValue } from '../StateProvider'
 import '../style/CheckoutProduct.css'
+import { CurrencyFormat } from '../reducer';
 
 function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
 
@@ -21,8 +22,7 @@ function CheckoutProduct({ id, image, title, price, rating, hideButton }) {
             <div className='checkoutProduct-info'>
                 <p className='checkoutProduct-title'>{title}</p>
                 <p className='checkoutProduct-price'>
-                    <small>$</small>
-                    <strong>{price}</strong>
+                    <strong>{CurrencyFormat(price)}</strong>
                 </p>
                 <div className="checkoutProduct-rating">
                     {Array(rating)

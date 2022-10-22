@@ -2,30 +2,7 @@ import React from 'react';
 import '../style/Order.css';
 import moment from "moment";
 import CheckoutProduct from './CheckoutProduct';
-//import CurrencyFormat from "react-currency-format";
-
-
-function CurrencyFormat(value){
-    let res = '';
-    const decimal = (value * 100) % 100;
-    let decimalStr = decimal.toString();
-    if (decimal === 0) {
-        decimalStr = '00';
-    }
-    res = '.' + decimalStr;
-
-    value = value - decimal;
-    let nextDigits = value % 1000;
-    res = nextDigits + res;
-
-    while (value >= 1000) {
-        value = value / 1000;
-        let nextDigits = value % 1000;
-        res = nextDigits + ',' + res;
-    }
-    res = '$' + res;
-    return res;
-}
+import CurrencyFormat from "../reducer";
 
 
 function Order({ order }) {
