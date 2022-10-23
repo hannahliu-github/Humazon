@@ -2,7 +2,7 @@ import React from 'react';
 import '../style/Order.css';
 import moment from "moment";
 import CheckoutProduct from './CheckoutProduct';
-import CurrencyFormat from "../reducer";
+import { CurrencyFormat } from "../reducer";
 
 
 function Order({ order }) {
@@ -13,8 +13,9 @@ function Order({ order }) {
             <p className="order-id">
                 <small>{order.id}</small>
             </p>
-            {order.data.basket?.map(item => (
+            {order.data.basket?.map((item, i) => (
                 <CheckoutProduct
+                    key={i}
                     id={item.id}
                     title={item.title}
                     image={item.image}
