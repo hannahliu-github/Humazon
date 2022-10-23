@@ -18,7 +18,7 @@ import { Elements } from "@stripe/react-stripe-js";
 
 // You don't need to hide this test API key, no need to use .env and .gitignore
 const promise = loadStripe(
-  "pk_test_51J2HdfF1niojSsYm5sf5mxCyGjAsbAJ15oZSEqlLqmKgKYNxgQhCRydDMfi799CT1eSPijoQFUNV4I7zXBRJp4MW00C56TMXoB"
+  "pk_test_51LvX7dAPnnVN55OMorhLzwbYpDTMljrEeqaFK87UAS1p1SUccrIvrDG46lDiZPHIaqj5FSjuSD00F58G2c6i3FUx00fQyEouek"
 );
 
 function App() {
