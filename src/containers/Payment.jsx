@@ -26,8 +26,8 @@ function Payment() {
             const response = await axios({
                 method: 'post',
                 // Stripe expects the total in a currencies subunits
-                url: `/payments/create?total=${Math.trunc(getBasketTotal(basket) * 100)}`,
-                headers: {'Access-Control-Allow-Origin': 'http://localhost:3001'}
+                headers: {'Access-Control-Allow-Origin': 'http://localhost:3000'},
+                url: `/payments/create?total=${Math.trunc(getBasketTotal(basket) * 100)}`
             });
             setClientSecret(response.data.clientSecret)
         }
@@ -69,7 +69,7 @@ function Payment() {
                 type: 'EMPTY_BASKET'
             })
             
-            navigate.replace('/orders')
+            navigate('/orders')
         })
     }
 

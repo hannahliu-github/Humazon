@@ -6,6 +6,6 @@ const instance = axios.create({
   // http://localhost:5001/e-commerce-store-app/us-central1/api'
 });
 
-instance.defaults.headers.post['Access-Control-Allow-Origin'] = 'http://localhost:3001';
+instance.defaults.headers.post['Access-Control-Allow-Origin'] = 'http://localhost:3000';
 
 export default instance;
