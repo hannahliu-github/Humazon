@@ -18,41 +18,41 @@ function Home() {
                     />
                     <Product
                         id='2' 
-                        title='Sboly Single Serve Coffee Maker Brewer for K-Cup Pod & Ground Coffee Thermal Drip Instant Coffee Machine with Self Cleaning Function, Brew Strength Control'
-                        price={39.99}
-                        image='https://chefman.com/wp-content/uploads/2018/12/RJ14-12-P.png'
+                        title='Cat Toys for Indoor Cats, Electronic Automated Cat Toys with Mouse Tail & Catnip Ball, Interactive Cat Toys with Battery, Exerciser Entertainment Hunting for Kitty Pet, Auto Shut Off'
+                        price={19.99}
+                        image='https://m.media-amazon.com/images/I/61Q3EeMJdtL._AC_SX425_.jpg'
                         rating={4}
                     />
                 </div>
                 <div className='home-row'>
                     <Product
                         id='3' 
-                        title='Sony Alpha a7 III Mirrorless Digital Camera with 28-70mm Lens'
-                        price={2254.95}
-                        image='https://1.img-dpreview.com/files/p/articles/9946986042/ILCE-7_wSEL2870_right.png'
-                        rating={4}
+                        title='15PCS Natural Silvervine Sticks for Cats, Catnip Sticks Matatabi Chew Sticks Teeth Molar Chew Toys for Cat Kitten Kitty Teeth Cleaning'
+                        price={5.89}
+                        image='https://m.media-amazon.com/images/I/71eDCfFRoQL._AC_SX425_.jpg'
+                        rating={3}
                     />
                     <Product
                         id='4' 
-                        title='Clorox Disinfecting Wipes, Bleach Free Cleaning Wipes, Fresh Scent, Moisture Seal Lid, 75 Wipes, Pack of 3 (New Packaging)'
-                        price={19.99}
-                        image='https://cdn.shopify.com/s/files/1/0362/3167/6040/products/clorox_handi_green-removebg-preview_874ef86f-a9a7-46ed-98b5-f478e7084c5f_grande.png?v=1605632484'
+                        title='Mr. Pen- Cat Nail Clipper, Cat Nail Trimmers, Cat Claw Clippers, Cat Claw Trimmers, Kitten Nail Clipper, Cat Clippers for Nails, Nail Clippers for Cats, Pet Nail Clippers for Cats, Cat Nail Cutter'
+                        price={6.85}
+                        image='https://m.media-amazon.com/images/I/71Mg3J8aSBS._AC_SX425_.jpg'
                         rating={5}
                     />
                     <Product
                         id="5" 
-                        title='EVGA GeForce RTX 3090 FTW3 Ultra Gaming, 24GB GDDR6X, iCX3 Technology, ARGB LED, Metal Backplate, 24G-P5-3987-KR'
-                        price={2124.99}
-                        image='https://images.evga.com/products/gallery/png/24G-P5-3987-KR_XL_1.png'
+                        title='PetFusion 3-Sided Vertical Cat Scratching Post | Available in 18” & 24” | Multiple Angle Cat Scratching Pad, 6 Usable Sides. Scratch, Play, & Perch | 100% Recyclable Cardboard Cat Lounge. 1 Yr Warr'
+                        price={53.69}
+                        image='https://m.media-amazon.com/images/I/71MOg+ixisL._AC_SX425_.jpg'
                         rating={5}
                     />                 
                 </div>
                 <div className='home-row'>
                     <Product
                         id='6' 
-                        title='LG 27 Class Premium IPS Flat Panel Ultra-Thin Bezel Monitor 27” FHD (1920 x 1080) Resolution'
-                        price={299.99}
-                        image='https://img.pngio.com/lg-ultrawide-full-hd-ips-gaming-monitor-29-inch-29um69g-b-att-ultrawide-monitor-png-636_569.png'
+                        title='pidan Cat Harness and Leash Set, Cats Escape Proof - Adjustable Kitten Harness for Large Small Cats, Lightweight Soft Walking Travel Petsafe Harness'
+                        price={12.99}
+                        image='https://m.media-amazon.com/images/I/71jXgsRq5LL._AC_SX425_.jpg'
                         rating={5}
                     />                
                 </div>
