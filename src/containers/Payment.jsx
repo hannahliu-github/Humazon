@@ -26,7 +26,7 @@ function Payment() {
             const response = await axios({
                 method: 'post',
                 // Stripe expects the total in a currencies subunits
-                headers: {'Access-Control-Allow-Origin': 'http://localhost:3000'},
+                headers: {'Access-Control-Allow-Origin': 'https://humazon-9-9-2019.web.app'},
                 url: `/payments/create?total=${Math.trunc(getBasketTotal(basket) * 100)}`
             });
             setClientSecret(response.data.clientSecret)

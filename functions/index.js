@@ -35,4 +35,4 @@ app.post("/payments/create", async (request, response) => {
 exports.api = functions.https.onRequest(app);
 
 // Example endpoint
-// http://localhost:5001/e-commerce-store-app/us-central1/api
+// http://localhost:5001/humazon-9-9-2019/us-central1/api
